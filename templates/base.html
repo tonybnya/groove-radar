@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrooveRadar | Track for Favorite Artists</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}" />
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/groove.ico') }}" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="brand flex items-center justify-center">
+      <a href="{{ url_for('index') }}">
+        <img class="logo" src="{{ url_for('static', filename='img/groove.svg')}}"> GrooveRadar
+      </a>
+    </h1>
+    {% block content %}{% endblock %}
+  </div>
+</body>
+
+</html>

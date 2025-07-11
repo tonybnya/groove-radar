@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Upcoming Events</h2>
+{% if events.get('data') %}
+{% for event in events.get('data') %}
+<div class="card">
+  <p><strong>Event Name:</strong> {{ event.name }}</p>
+  <p><strong>Date:</strong> {{ event.datetime}}</p>
+  <p><strong>City:</strong> {{ event.venue.city }}, {{ event.venue.country }}</p>
+  <p><strong>Venue:</strong> {{ event.venue.name }}</p>
+  {% if event.venue.id %}
+  <p><a href="{{ url_for('venue_info', venue_id=event.venue.id) }}">View Venue Details</a></p>
+  {% endif %}
+</div>
+{% endfor %}
+{% else %}
+<p>No upcoming events found.</p>
+{% endif %}
+{% endblock %}

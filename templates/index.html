@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Search for Artists or Events</h2>
+<form action="{{ url_for('search') }}" method="get">
+  <input type="text" name="keyword" placeholder="e.g. Ed Sheeran, Jazz Festival" required />
+  <button type="submit">Search</button>
+</form>
+{% endblock %}
