@@ -5,6 +5,7 @@ Author      : @tonybnya
 """
 
 from flask import Flask, render_template, request
+
 from utils import get_artist_bio, get_artist_events, search_artist_or_event
 
 app = Flask(__name__)
@@ -19,6 +20,7 @@ def index():
 def search():
     keyword = request.args.get('keyword')
     results = search_artist_or_event(keyword)
+    print("DEBUG: results = ", results)
     return render_template('search_results.html', results=results, keyword=keyword)
 
 

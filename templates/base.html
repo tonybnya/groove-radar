@@ -10,12 +10,12 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1 class="brand flex items-center justify-center">
-      <a href="{{ url_for('index') }}">
-        <img class="logo" src="{{ url_for('static', filename='img/groove.svg')}}"> GrooveRadar
-      </a>
-    </h1>
+  <nav class="brand text-2xl text-white bg-black p-4">
+    <a class="flex items-center gap-2" href="{{ url_for('index') }}">
+      <img class="h-[40px] w-[40px]" src="{{ url_for('static', filename='img/groove.svg')}}"> GrooveRadar
+    </a>
+  </nav>
+  <div class="max-w-[800px] m-auto p-[20px]">
     {% block content %}{% endblock %}
   </div>
 </body>

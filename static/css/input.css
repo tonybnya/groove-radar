@@ -1,49 +1,16 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
-
-.logo {
-  height: 40px;
-  width: 40px;
-}
-
-brand {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}
-
-h1,
-h2 {
-  color: #333;
-}
-
-a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  color: white;
+  background-image: url(../img/noise.png);
+  background-color: #000;
+  background-repeat: no-repeat;
 }
 
 .card {
-  background-color: white;
+  /* background-color: gray; */
+  /* border: gray; */
   padding: 15px;
   margin: 10px 0;
   border-radius: 8px;

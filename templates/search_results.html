@@ -2,11 +2,11 @@
 {% block content %}
 <h2>Search Results for: "{{ keyword }}"</h2>
 {% for result in results.get('data', []) %}
-<div class="card">
+<div class="card border-2 border-gray-400">
   <p><strong>Name:</strong> {{ result.name }}</p>
   <p><strong>Type:</strong> {{ result.type }}</p>
   {% if result.type == 'artist' %}
-  <a href="{{ url_for('artist', artist_id=result.id) }}">View artist</a>
+  <a class="text-[#ff5722] underline" href="{{ url_for('artist', artist_id=result.id) }}">View artist</a>
   {% endif %}
 </div>
 {% endfor %}
